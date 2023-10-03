@@ -1,5 +1,10 @@
 "use strict";
 // -------- numbers ----------------------------------------------------------------
+let decimal = 6; // десяткові
+let float = 3.14; // речові або число з плаваючою крапкою
+let hex = 0xf00d; // шістнадцяткове
+let binary = 0b1010; // двійкове
+let octal = 0o744; // вісімкове
 let x = 10.5;
 x = -10;
 x = 3.5;
@@ -25,6 +30,8 @@ b = false;
 // -------- nothing ----------------------------------------------------------------
 let c = undefined;
 let d = null;
+let empty = null;
+let notParam = undefined;
 // -------- literal ----------------------------------------------------------------
 const num = 108;
 const str3 = 'string';
@@ -40,4 +47,10 @@ let xx = 2;
 if (typeof e === 'string') {
     e.toUpperCase();
 }
+// it is not necessary to specify the data type if you pass it explicitly
+const numA = 10;
+const strA = 'Some string';
+const boolA = true;
+const emptyA = null;
+const notParamA = undefined;
 //# sourceMappingURL=01-primitives.js.map
