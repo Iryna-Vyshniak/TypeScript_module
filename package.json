@@ -1,0 +1,24 @@
+{
+  "name": "typescript_module",
+  "version": "1.0.0",
+  "description": "---",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "web-dev-server --node-resolve --open --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Iryna-Vyshniak/TypeScript_module.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Iryna-Vyshniak/TypeScript_module/issues"
+  },
+  "homepage": "https://github.com/Iryna-Vyshniak/TypeScript_module#readme",
+  "devDependencies": {
+    "@web/dev-server": "^0.3.2"
+  }
+}
