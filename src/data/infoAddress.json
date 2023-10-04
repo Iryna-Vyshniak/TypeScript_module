@@ -1,0 +1,11 @@
+{
+  "officeId": 77,
+  "isOpened": false,
+  "contacts": {
+    "phone": "+19100000000",
+    "email": "my@yahoo.com",
+    "address": {
+      "city": "New York, NY"
+    }
+  }
+}
