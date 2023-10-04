@@ -37,3 +37,55 @@ const userX = {
 
 // getFullData({ firstName: 'John' })  => error
 getFullData({ firstName: 'John', lastName: 'Doe' })
+
+
+// Create interfaces User and Admin
+// Keys for User: login, email, password, isOnline, lastVisited
+// Keys for Admin: login, email, password, isOnline, lastVisited, role
+
+// Create a function login with param user (with keys login and password)
+// Check if login and password are not empty and then greet user
+
+interface UserTest {
+    login: string;
+    email: string;
+    password: string;
+    isOnline: boolean;
+    lastVisited: Date;
+}
+
+interface AdminTest {
+    login: string;
+    email: string;
+    password: string;
+    isOnline: boolean;
+    lastVisited: Date;
+    role?: string;
+}
+
+const userTest: UserTest = {
+    login: 'Mike',
+    email: 'mike@example.com',
+    password: 'password',
+    isOnline: false,
+    lastVisited: new Date(2023, 4, 10),
+}
+
+const adminTest: AdminTest = {
+    login: 'admin',
+    email: 'admin@example.com',
+    password: 'password',
+    isOnline: false,
+    lastVisited: new Date(2023, 4, 10),
+    role: 'super admin',
+}
+
+function login(user: { login: string, password: string }) {
+    if (user.login.length > 0 && user.password.length > 0) return `Welcome ${user.login}`
+    return 'Please sign up';
+}
+
+login(userTest)
+login(adminTest)
+console.log("login(adminTest): ", login(adminTest));
+console.log("login(userTest): ", login(userTest));

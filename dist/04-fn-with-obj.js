@@ -31,4 +31,28 @@ const userX = {
 };
 // getFullData({ firstName: 'John' })  => error
 getFullData({ firstName: 'John', lastName: 'Doe' });
+const userTest = {
+    login: 'Mike',
+    email: 'mike@example.com',
+    password: 'password',
+    isOnline: false,
+    lastVisited: new Date(2023, 4, 10),
+};
+const adminTest = {
+    login: 'admin',
+    email: 'admin@example.com',
+    password: 'password',
+    isOnline: false,
+    lastVisited: new Date(2023, 4, 10),
+    role: 'super admin',
+};
+function login(user) {
+    if (user.login.length > 0 && user.password.length > 0)
+        return `Welcome ${user.login}`;
+    return 'Please sign up';
+}
+login(userTest);
+login(adminTest);
+console.log("login(adminTest): ", login(adminTest));
+console.log("login(userTest): ", login(userTest));
 //# sourceMappingURL=04-fn-with-obj.js.map
