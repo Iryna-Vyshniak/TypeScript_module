@@ -1,4 +1,28 @@
 "use strict";
+const obj = {};
+const objNextVariant = {};
+let userData = {
+    name: "Tom",
+    age: 30
+};
+let userAge = {
+    age: 30,
+};
+// let userNameLikeNumber: { name: string; age: number } = {
+//     name: 10, // error
+//     age: 30,
+// };
+let infoAddress = {
+    "officeId": 77,
+    "isOpened": false,
+    "contacts": {
+        "phone": "+19100000000",
+        "email": "my@yahoo.com",
+        "address": {
+            "city": "New York, NY"
+        }
+    }
+};
 const user = {
     firstName: 'John',
     lastName: 'Doe',

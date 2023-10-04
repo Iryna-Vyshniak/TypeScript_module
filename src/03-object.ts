@@ -1,3 +1,44 @@
+const obj: object = {};
+const objNextVariant: {} = {};
+
+let userData: { name: string; age: number } = {
+    name: "Tom",
+    age: 30
+};
+
+let userAge: { name?: string; age: number } = {
+    age: 30,
+};
+
+// let userNameLikeNumber: { name: string; age: number } = {
+//     name: 10, // error
+//     age: 30,
+// };
+
+let infoAddress: {
+    officeId: number,
+    isOpened: boolean,
+    contacts: {
+        phone: string,
+        email: string,
+        address: {
+            city: string
+        }
+    }
+} = {
+    "officeId": 77,
+    "isOpened": false,
+    "contacts": {
+        "phone": "+19100000000",
+        "email": "my@yahoo.com",
+        "address": {
+            "city": "New York, NY"
+        }
+    }
+}
+
+// ---- with INTERFACE -------------------------------------------------------
+
 interface User {
     firstName: string
     lastName: string,
