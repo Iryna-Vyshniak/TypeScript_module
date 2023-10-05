@@ -1,4 +1,3 @@
-"use strict";
 function fn(num, str, bool, empty) {
     // Some logic
 }
@@ -28,14 +27,47 @@ function sum(a, b) {
 const sum2 = (a, b) => a + b;
 sum(1, 7);
 sum2(1, 7);
+// ----------------------------------------------------------------
+let myFunc;
+myFunc = (first, second) => {
+    console.log(`First: ${first}, Second: ${second}`);
+};
+myFunc('Hello', 42); //  "First: Hello, Second: 42"
+function calc(param1, param2, callback) {
+    console.log('Result:', callback(param1, param2));
+}
+calc(1, 1, (num1, num2) => num1 + num2);
+calc(10, 5, (num1, num2) => num1 - num2);
+function doSomething(callback) {
+    callback();
+}
+doSomething(() => {
+    console.log('Callback function!');
+});
 function log(name, userId) {
     console.log('Hello', name, 'with Id:', userId || 'anonym');
 }
 log('Vivat');
 log('Bob', '123');
+function logMessage(message) {
+    console.log(message);
+}
+logMessage('Hello, world!');
+function calc2(param1, param2, callback) {
+    console.log('Result:', callback(param1, param2));
+}
+calc2(1, 1, (num1, num2) => num1 + num2);
+calc2(10, 5, (num1, num2) => num1 - num2);
 // ------------------------------------------------------------------
 function crash() {
     throw new Error("crash");
+}
+function throwError(message) {
+    throw new Error(message);
+}
+// Function with infinite loop
+function infiniteLoop() {
+    while (true) { }
 }
 // ------------------------------------------------------------------
 function average(...nums) {
@@ -57,4 +89,21 @@ function slice(str, start, end) {
     }
     return newStr;
 }
+// ------------AFTER ENUM TUPLES ALIASES UNIONS ----------------------------------------------------
+// type QuestionStatus = 'published' | 'draft' | 'deleted'
+var QuestionStatus;
+(function (QuestionStatus) {
+    QuestionStatus["PUBLISHED"] = "published";
+    QuestionStatus["DRAFT"] = "draft";
+    QuestionStatus["DELETED"] = "deleted";
+})(QuestionStatus || (QuestionStatus = {}));
+async function getFaqs(req) {
+    const res = await fetch('/faqs', {
+        method: 'POST',
+        body: JSON.stringify(req)
+    });
+    const data = await res.json();
+    return data;
+}
+export {};
 //# sourceMappingURL=02-functions.js.map

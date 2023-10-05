@@ -34,6 +34,34 @@ const sum2 = (a: number, b: number): number => a + b;
 sum(1, 7)
 sum2(1, 7)
 
+// ----------------------------------------------------------------
+let myFunc: (firstArg: string, secondArg: number) => void;
+
+myFunc = (first: string, second: number) => {
+    console.log(`First: ${first}, Second: ${second}`);
+};
+
+myFunc('Hello', 42); //  "First: Hello, Second: 42"
+
+
+type CallbackType = (num1: number, num2: number) => number;
+
+function calc(param1: number, param2: number, callback: CallbackType): void {
+    console.log('Result:', callback(param1, param2));
+}
+
+calc(1, 1, (num1, num2) => num1 + num2);
+calc(10, 5, (num1, num2) => num1 - num2);
+
+
+function doSomething(callback: () => void) {
+    callback();
+}
+
+doSomething(() => {
+    console.log('Callback function!');
+});
+
 function log(name: string, userId?: string): void {
     console.log('Hello', name, 'with Id:', userId || 'anonym');
 }
@@ -41,10 +69,37 @@ log('Vivat')
 log('Bob', '123')
 
 
+function logMessage(message: string): void {
+    console.log(message);
+}
+
+logMessage('Hello, world!');
+
+
+type CallbackType2 = (...nums: number[]) => number;
+
+function calc2(param1: number, param2: number, callback: CallbackType2): void {
+    console.log('Result:', callback(param1, param2));
+}
+
+calc2(1, 1, (num1, num2) => num1 + num2);
+calc2(10, 5, (num1, num2) => num1 - num2);
+
 // ------------------------------------------------------------------
 function crash(): never {
     throw new Error("crash");
 }
+
+function throwError(message: string): never {
+    throw new Error(message);
+}
+
+// Function with infinite loop
+function infiniteLoop(): never {
+    while (true) { }
+}
+
+export { };
 
 
 // ------------------------------------------------------------------
@@ -72,3 +127,30 @@ function slice(str: string, start: number, end?: number): string {
 
     return newStr;
 }
+
+// ------------AFTER ENUM TUPLES ALIASES UNIONS ----------------------------------------------------
+
+// type QuestionStatus = 'published' | 'draft' | 'deleted'
+enum QuestionStatus {
+    PUBLISHED = 'published',
+    DRAFT = 'draft',
+    DELETED = 'deleted'
+}
+
+interface Faqs {
+    question: string,
+    answer: string,
+    tags: string[],
+    likes: number,
+    status?: QuestionStatus
+}
+
+async function getFaqs(req: { topicId: number, status?: QuestionStatus }): Promise<Faqs[]> {
+    const res = await fetch('/faqs', {
+        method: 'POST',
+        body: JSON.stringify(req)
+    })
+    const data: Faqs[] = await res.json();
+    return data;
+}
+
