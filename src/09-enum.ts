@@ -76,6 +76,14 @@ function action(status: StatusCode) { }
 
 action(StatusCode.SUCCESS);
 
+enum Sizes {
+    LARGE = 'large',
+    MEDIUM = 'medium',
+    SMALL = 'small',
+}
+
+const button: Sizes = Sizes.LARGE;
+
 // enum StatusCode {
 //      SUCCESS = 'success',
 //     IN_PROGRESS = 'progress',

@@ -1,3 +1,6 @@
+
+// union type - its  ... | ... | ... | ... => or...or...or...
+
 type Status = 'ok' | 'loading' | 'error';
 type StatusX = 'idle' | 'loading' | 'finished' | 'rejected';
 

@@ -52,6 +52,22 @@ const userType: UserType = {
     skills: ['active', 'tolerance'],
 }
 
+type Coordinate = [number, number];
+
+type UserWithCoords = {
+    id: number | string;
+    name: string;
+    age: number;
+    coords: Coordinate;
+};
+
+const userWithCoords: UserWithCoords = {
+    id: 1,
+    name: 'Alice',
+    age: 32,
+    coords: [10, 20],
+};
+
 type UrlStr = string;
 type HttpMethod = 'POST' | 'GET'
 
@@ -59,5 +75,9 @@ function fetchWithAuth(url: UrlStr, method: HttpMethod): 1 | -1 {
     return 1;
 }
 
+
 fetchWithAuth('url', 'GET');
 
+type Size = 'small' | 'medium' | 'large';
+
+const btn: Size = 'large';

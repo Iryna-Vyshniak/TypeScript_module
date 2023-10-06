@@ -50,6 +50,13 @@ const response = {
 if (response.statusCode === StatusCode.SUCCESS) { }
 function action(status) { }
 action(StatusCode.SUCCESS);
+var Sizes;
+(function (Sizes) {
+    Sizes["LARGE"] = "large";
+    Sizes["MEDIUM"] = "medium";
+    Sizes["SMALL"] = "small";
+})(Sizes || (Sizes = {}));
+const button = Sizes.LARGE;
 // enum StatusCode {
 //      SUCCESS = 'success',
 //     IN_PROGRESS = 'progress',

@@ -1,4 +1,5 @@
 "use strict";
+// union type - its  ... | ... | ... | ... => or...or...or...
 const statusX = 'loading';
 const statusXX = 'idle'; // OK
 // const statusXX: StatusX = ''; // ERROR
