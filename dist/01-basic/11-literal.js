@@ -1,35 +1,24 @@
+"use strict";
+/* eslint-disable prettier/prettier */
 // Literal Type — це тип, що набуває конкретного значення.З ним ви можете визначити тип змінної так, щоб він набував лише певних значень.
-
-type FirstOrSecond = 1 | 2;
-let valueX: FirstOrSecond;
+let valueX;
 valueX = 1; // OK
 valueX = 2; // OK
-// valueX = 3; // Error: Type '3' is not assignable to type 'OneOrTwo'.
-
-type YesOrNoX = 'yes' | 'no';
-let answerX: YesOrNoX;
+let answerX;
 answerX = 'yes'; // OK
 answerX = 'no'; // OK
 // answerX = 'maybe'; // Error: Type '"maybe"' is not assignable to type 'YesOrNo'.
-
-function fetchWithAuths(url: string, method: 'POST' | 'GET'): 1 | -1 {
+function fetchWithAuths(url, method) {
     // return 0; // error
     return 1; // ok
 }
-
-const url = 'https://api/v1/rest'
-fetchWithAuths(url, 'POST')
-
-const method = 'GET'
-fetchWithAuths(url, method) // ok
-
-let methodFromObj = 'POST'
-fetchWithAuths(url, methodFromObj as 'POST') // ok => use cust as
-
-
-type ButtonSize = 'small' | 'medium' | 'large';
-
-function getButtonStyle(size: ButtonSize) {
+const url = 'https://api/v1/rest';
+fetchWithAuths(url, 'POST');
+const method = 'GET';
+fetchWithAuths(url, method); // ok
+const methodFromObj = 'POST';
+fetchWithAuths(url, methodFromObj); // ok => use cust as
+function getButtonStyle(size) {
     switch (size) {
         case 'small':
             return { fontSize: '10px', padding: '5px' };
@@ -41,6 +30,6 @@ function getButtonStyle(size: ButtonSize) {
             return { fontSize: '14px', padding: '10px' };
     }
 }
-
-let myButtonStyle = getButtonStyle('medium'); // OK
+const myButtonStyle = getButtonStyle('medium'); // OK
 // myButtonStyle = getButtonStyle('extra-large'); // Error: Argument of type '"extra-large"' is not assignable to parameter of type 'ButtonSize'.
+//# sourceMappingURL=11-literal.js.map

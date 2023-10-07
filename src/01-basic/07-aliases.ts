@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 // Алиас это всё то, что мы обозначаем словом type.
 
 // Такую запись как:
@@ -22,13 +23,11 @@ answer = 'yes'; // OK
 answer = 'no'; // OK
 // answer = 'maybe'; // Error: Type '"maybe"' is not assignable to type 'YesOrNo'.
 
-
 type MyBoolean = false | true;
 type mixedType = string | number | boolean;
 
 type Pair = [string, string];
 type Pairs = Pair[];
-
 
 type DiffCar = {
     wheels: number;
@@ -38,19 +37,19 @@ type DiffCar = {
     name?: string;
 
     [key: string]: unknown;
-}
+};
 
 type UserType = {
-    name: string,
-    age: number,
-    skills: string[],
-}
+    name: string;
+    age: number;
+    skills: string[];
+};
 
 const userType: UserType = {
     name: 'Alexander',
     age: 36,
     skills: ['active', 'tolerance'],
-}
+};
 
 type Coordinate = [number, number];
 
@@ -69,12 +68,11 @@ const userWithCoords: UserWithCoords = {
 };
 
 type UrlStr = string;
-type HttpMethod = 'POST' | 'GET'
+type HttpMethod = 'POST' | 'GET';
 
 function fetchWithAuth(url: UrlStr, method: HttpMethod): 1 | -1 {
     return 1;
 }
-
 
 fetchWithAuth('url', 'GET');
 

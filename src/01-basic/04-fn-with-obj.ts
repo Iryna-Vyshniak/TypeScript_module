@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 function printPoint(point: { x: string; y: string }): void {
     console.log(`Coordinate of the point is x: ${point.x} and y: ${point.y}`);
 }
@@ -6,20 +7,19 @@ const object = {
     x: '1',
     y: '2',
     z: 4,
-}
+};
 
-printPoint(object)
+printPoint(object);
 
 function printName(user: { firstName: string; lastName?: string }): void {
     console.log(`Hello`, user.firstName.toUpperCase());
     if (user.lastName) console.log(`Nice to meet you Mr.`, user.lastName.toUpperCase());
 }
 
-printName({ firstName: 'John' })
-printName({ firstName: 'John', lastName: 'Doe' })
+printName({ firstName: 'John' });
+printName({ firstName: 'John', lastName: 'Doe' });
 
-
-function getFullData(userEntity: { firstName: string, lastName: string }): string {
+function getFullData(userEntity: { firstName: string; lastName: string }): string {
     console.log(`Hello`, userEntity.firstName.toUpperCase());
     return `Nice to meet you Mr. ${userEntity.lastName.toUpperCase()}`;
 }
@@ -32,12 +32,11 @@ const userX = {
     skills: {
         dev: true,
         devops: true,
-    }
-}
+    },
+};
 
 // getFullData({ firstName: 'John' })  => error
-getFullData({ firstName: 'John', lastName: 'Doe' })
-
+getFullData({ firstName: 'John', lastName: 'Doe' });
 
 // Create interfaces User and Admin
 // Keys for User: login, email, password, isOnline, lastVisited
@@ -69,7 +68,7 @@ const userTest: UserTest = {
     password: 'password',
     isOnline: false,
     lastVisited: new Date(2023, 4, 10),
-}
+};
 
 const adminTest: AdminTest = {
     login: 'admin',
@@ -78,14 +77,14 @@ const adminTest: AdminTest = {
     isOnline: false,
     lastVisited: new Date(2023, 4, 10),
     role: 'super admin',
-}
+};
 
-function login(user: { login: string, password: string }) {
-    if (user.login.length > 0 && user.password.length > 0) return `Welcome ${user.login}`
+function login(user: { login: string; password: string }) {
+    if (user.login.length > 0 && user.password.length > 0) return `Welcome ${user.login}`;
     return 'Please sign up';
 }
 
-login(userTest)
-login(adminTest)
-console.log("login(adminTest): ", login(adminTest));
-console.log("login(userTest): ", login(userTest));
+login(userTest);
+login(adminTest);
+console.log('login(adminTest): ', login(adminTest));
+console.log('login(userTest): ', login(userTest));

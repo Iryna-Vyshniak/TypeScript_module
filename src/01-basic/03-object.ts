@@ -1,12 +1,14 @@
+/* eslint-disable prettier/prettier */
+
 const obj: object = {};
 const objNextVariant: {} = {};
 
-let userData: { name: string; age: number } = {
-    name: "Tom",
-    age: 30
+const userData: { name: string, age: number } = {
+    name: 'Tom',
+    age: 30,
 };
 
-let userAge: { name?: string; age: number } = {
+const userAge: { name?: string, age: number } = {
     age: 30,
 };
 
@@ -15,35 +17,35 @@ let userAge: { name?: string; age: number } = {
 //     age: 30,
 // };
 
-let infoAddress: {
+const infoAddress: {
     officeId: number,
     isOpened: boolean,
     contacts: {
         phone: string,
         email: string,
         address: {
-            city: string
-        }
-    }
+            city: string,
+        },
+    },
 } = {
-    "officeId": 77,
-    "isOpened": false,
-    "contacts": {
-        "phone": "+19100000000",
-        "email": "my@yahoo.com",
-        "address": {
-            "city": "New York, NY"
-        }
-    }
-}
+    officeId: 77,
+    isOpened: false,
+    contacts: {
+        phone: '+19100000000',
+        email: 'my@yahoo.com',
+        address: {
+            city: 'New York, NY',
+        },
+    },
+};
 
 // ---- with INTERFACE -------------------------------------------------------
 
 interface User {
-    firstName: string
-    lastName: string,
-    city: string,
-    age: number,
+    firstName: string;
+    lastName: string;
+    city: string;
+    age: number;
 }
 
 const user: User = {
@@ -51,7 +53,7 @@ const user: User = {
     lastName: 'Doe',
     city: 'San Francisco',
     age: 21,
-}
+};
 
 interface Car {
     wheels: number;
@@ -69,9 +71,9 @@ const car: Car = {
     type: 'Sedan',
     isNew: true,
     name: 'X3',
-}
+};
 
-car.name = 'X100'
+car.name = 'X100';
 
 const carNew: Car = {
     wheels: 4,
@@ -79,21 +81,21 @@ const carNew: Car = {
     type: '',
     isNew: true,
     name: 'X3',
-}
+};
 
 // carNew.go = true;
 carNew['go'] = true; // popular style guide
-console.log("carNew: ", carNew); // {wheels: 4, brand: 'Audi', type: '', isNew: true, name: 'X3', go: true}
+console.log('carNew: ', carNew); // {wheels: 4, brand: 'Audi', type: '', isNew: true, name: 'X3', go: true}
 
 interface Page {
     title: string;
     likes: number;
     accounts: string[];
-    status: "open" | "close";
+    status: 'open' | 'close';
     details?: {
         createAt: Date,
         updateAt: Date,
-    }
+    };
 }
 
 const page1: Page = {
@@ -104,12 +106,12 @@ const page1: Page = {
     details: {
         createAt: new Date('2021-01-01'),
         updateAt: new Date('2021-05-01'),
-    }
-}
+    },
+};
 
-const page2: Page = {
+export const page2: Page = {
     title: 'Python or Js',
     likes: 5,
     accounts: ['Alex'],
     status: 'close',
-}
+};

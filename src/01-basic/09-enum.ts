@@ -1,8 +1,8 @@
+/* eslint-disable prettier/prettier */
 enum ShapeKind {
     Circle, // 0
-    Square // 1
+    Square, // 1
 }
-
 
 const myShape = ShapeKind.Circle;
 
@@ -21,7 +21,7 @@ interface Square {
 const circle1: Circle = {
     radius: 4,
     kind: ShapeKind.Circle,
-}
+};
 
 enum Grades {
     Junior = 'junior',
@@ -30,26 +30,26 @@ enum Grades {
 }
 
 interface Dev {
-    login: string,
-    skills: string[]
-    level: Grades,
+    login: string;
+    skills: string[];
+    level: Grades;
 }
 
 const dev: Dev = {
     level: Grades.Junior,
     login: 'Alex',
-    skills: ['HTML', 'CSS', 'JS']
-}
+    skills: ['HTML', 'CSS', 'JS'],
+};
 
 function upGrade(user: { level: Grades }) {
     if (user.level === Grades.Junior) {
-        user.level = Grades.Middle
+        user.level = Grades.Middle;
     } else if (user.level === Grades.Middle) {
-        user.level = Grades.Senior
+        user.level = Grades.Senior;
     }
 }
 
-upGrade(dev)
+upGrade(dev);
 
 enum ErrorCode {
     NOT_AUTH = 401,
@@ -68,11 +68,12 @@ enum StatusCode {
 const response = {
     message: 'Payment successful',
     statusCode: StatusCode.SUCCESS,
-}
+};
 
-if (response.statusCode === StatusCode.SUCCESS) { }
+if (response.statusCode === StatusCode.SUCCESS) { console.log(StatusCode.SUCCESS); }
 
-function action(status: StatusCode) { }
+
+function action(status: StatusCode): void { console.log(StatusCode); }
 
 action(StatusCode.SUCCESS);
 

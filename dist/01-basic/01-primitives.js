@@ -1,65 +1,58 @@
+"use strict";
+/* eslint-disable prettier/prettier */
 // -------- numbers ----------------------------------------------------------------
-let decimal: number = 6;     // десяткові
-let float: number = 3.14;    // речові або число з плаваючою крапкою
-let hex: number = 0xf00d;    // шістнадцяткове
-let binary: number = 0b1010; // двійкове
-let octal: number = 0o744;   // вісімкове
+const decimal = 6; // десяткові
+const float = 3.14; // речові або число з плаваючою крапкою
+const hex = 0xf00d; // шістнадцяткове
+const binary = 0b1010; // двійкове
+const octal = 0o744; // вісімкове
 let x = 10.5;
 x = -10;
 x = 3.5;
-x = 10_000;
-let z = NaN;
-let age = 10;
+x = 10000;
+const z = NaN;
+const age = 10;
 // let y = 12345n;
 // age = '10' => error
-
-let revenue = 1000;
-let bonus = 500;
-let res = revenue + bonus;
-console.log("res: ", res);
-
-
-
+const revenue = 1000;
+const bonus = 500;
+const res = revenue + bonus;
+console.log('res: ', res);
 // -------- string ----------------------------------------------------------------
-let str1: string;
+let str1;
 str1 = 'Hello world';
-let str2: string = 'something';
-let symb = Symbol('as');
+const str2 = 'something';
+const symb = Symbol('as');
 // let a = str1 + symb => error
-
 // -------- boolean ----------------------------------------------------------------
 let b = true;
 b = false;
 // b = 1 => error
-
 // -------- nothing ----------------------------------------------------------------
-let c: undefined = undefined;
-let d: null = null;
-let empty: null = null;
-let notParam: undefined = undefined;
-
+const c = undefined;
+const d = null;
+const empty = null;
+const notParam = undefined;
 // -------- literal ----------------------------------------------------------------
 const num = 108;
 const str3 = 'string';
-
 // -------- universal ----------------------------------------------------------------
-let e: any = 'str';
+let e = 'str';
 e = [];
 e = {};
 e = 7;
 if (typeof e === 'string') {
     e.toUpperCase();
 }
-
-let xx: unknown = 2;
+const xx = 2;
 if (typeof e === 'string') {
     e.toUpperCase();
 }
-
-
 // it is not necessary to specify the data type if you pass it explicitly
 const numA = 10;
 const strA = 'Some string';
 const boolA = true;
 const emptyA = null;
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const notParamA = undefined;
+//# sourceMappingURL=01-primitives.js.map

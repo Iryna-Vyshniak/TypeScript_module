@@ -60,7 +60,7 @@ calc2(1, 1, (num1, num2) => num1 + num2);
 calc2(10, 5, (num1, num2) => num1 - num2);
 // ------------------------------------------------------------------
 function crash() {
-    throw new Error("crash");
+    throw new Error('crash');
 }
 function throwError(message) {
     throw new Error(message);
@@ -100,10 +100,17 @@ var QuestionStatus;
 async function getFaqs(req) {
     const res = await fetch('/faqs', {
         method: 'POST',
-        body: JSON.stringify(req)
+        body: JSON.stringify(req),
     });
     const data = await res.json();
     return data;
+}
+function userConstructor(name, age, hobby) {
+    return {
+        name,
+        age,
+        hobby,
+    };
 }
 export {};
 //# sourceMappingURL=02-functions.js.map

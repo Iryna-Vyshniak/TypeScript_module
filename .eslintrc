@@ -1,10 +1,7 @@
 {
     "extends": [
         "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:import/typescript",
-        "plugin:prettier/recommended",
-        "prettier"
+        "plugin:@typescript-eslint/recommended"
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
@@ -16,26 +13,21 @@
     },
     "plugins": [
         "@typescript-eslint",
-        "import",
         "prettier"
     ],
     "rules": {
         "@typescript-eslint/no-explicit-any": "off",
         "@typescript-eslint/no-non-null-assertion": "off",
-        "@typescript-eslint/no-unused-vars": [
-            "warn",
-            {
-                "argsIgnorePattern": "^_",
-                "varsIgnorePattern": "^_",
-                "caughtErrorsIgnorePattern": "^_"
-            }
-        ],
+        "@typescript-eslint/no-unused-vars": "off",
+        "@typescript-eslint/ban-types": "off",
         "prettier/prettier": [
             "warn",
             {
                 "endOfLine": "auto",
-                "singleQuote": true
+                "singleQuote": true,
+                "parser": "flow"
             }
-        ]
+        ],
+        "no-extra-boolean-cast": "off"
     }
 }

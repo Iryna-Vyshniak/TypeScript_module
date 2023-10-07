@@ -8,20 +8,22 @@ tupleType = ['hello', true]; // OK
 let date: [number, number, number];
 date = [7, 11, 2023]; // OK
 
-const pairsTuple: [string, string][] = [['key', 'value'], ['key2', 'value2']]
-const dataTuple: [number, boolean, string] = [1, false, 'lodash']
+const pairsTuple: [string, string][] = [
+    ['key', 'value'],
+    ['key2', 'value2'],
+];
+const dataTuple: [number, boolean, string] = [1, false, 'lodash'];
 
 const skillsTuple: [number, string] = [1, 'Dev'];
 const idSkill = skillsTuple[0];
 const roleSkill = skillsTuple[1];
 const [id, role] = skillsTuple;
 
-
-const newTuple: [string, number, Date, ...string[]] = ['Doe', 27, new Date(), 'John', 'Snow']
-const arrTuple: [number, string, ...boolean[]] = [7, 'sdf', true, true, false] // OK
+const newTuple: [string, number, Date, ...string[]] = ['Doe', 27, new Date(), 'John', 'Snow'];
+const arrTuple: [number, string, ...boolean[]] = [7, 'sdf', true, true, false]; // OK
 // const arrTuple: [number, string, ...boolean[]] = [7, 'sdf', true, true] // OK
 // const arrTuple: [number, string, ...boolean[]] = [7, 'sdf'] // OK
 
 // csv
-const doc: [string, string, number, Date][] = []
-doc.push(['Michail', 'Derekson', 23, new Date(2000, 12, 1)])
+const doc: [string, string, number, Date][] = [];
+doc.push(['Michail', 'Derekson', 23, new Date(2000, 12, 1)]);
