@@ -94,7 +94,7 @@ function logMultipleIds(a: string | number, b: string | boolean) {
   }
 }
 
-function combine(param1: number | string, param2: number | string) {
+export function combine(param1: number | string, param2: number | string) {
   if (typeof param1 === 'number' && typeof param2 === 'number') {
     return param1 + param2;
   } else {

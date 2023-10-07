@@ -1,4 +1,3 @@
-"use strict";
 // union type - its  ... | ... | ... | ... => or...or...or...
 const statusX = 'loading';
 const statusXX = 'idle'; // OK
@@ -74,7 +73,7 @@ function logMultipleIds(a, b) {
         console.log(a.toString());
     }
 }
-function combine(param1, param2) {
+export function combine(param1, param2) {
     if (typeof param1 === 'number' && typeof param2 === 'number') {
         return param1 + param2;
     }
