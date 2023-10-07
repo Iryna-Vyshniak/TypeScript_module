@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 function printPoint(point: { x: string; y: string }): void {
     console.log(`Coordinate of the point is x: ${point.x} and y: ${point.y}`);
 }

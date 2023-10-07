@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 interface User {
     readonly email: string,
     readonly login: string,
@@ -17,11 +16,11 @@ interface Role {
     roleId: number,
 }
 
-interface Window {
-    isAuth?: boolean,
-}
+// interface Window {
+//     isAuth?: boolean,
+// }
 
-window.isAuth
+// window.isAuth
 
 interface Person {
     readonly firstName: string,
@@ -55,7 +54,7 @@ const user: Employee = {
 }
 
 
-const developer: Developer = {
+export const developer: Developer = {
     roleId: 1,
     login: "employee",
     email: 'em@yahoo.com',

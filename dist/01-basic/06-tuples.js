@@ -1,9 +1,11 @@
 "use strict";
+/* eslint-disable no-irregular-whitespace */
+/* eslint-disable prefer-const */
 // Tuple - is a data type that allows you to define an array with a fixed number of elements whose types are known but do not necessarily have to be the same.
 let tupleType;
 tupleType = ['hello', true]; // OK
 // tupleType = [true, 'hello']; // Error. Wrong types
-// tupleType = ['hello', true, true]; // Error. More values ​​than a tuple
+// tupleType = ['hello', true, true]; // Error. More values ​than a tuple
 let date;
 date = [7, 11, 2023]; // OK
 const pairsTuple = [

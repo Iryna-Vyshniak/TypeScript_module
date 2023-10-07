@@ -1,5 +1,4 @@
 "use strict";
-/* eslint-disable prettier/prettier */
 // Алиас это всё то, что мы обозначаем словом type.
 let value;
 value = 1; // OK

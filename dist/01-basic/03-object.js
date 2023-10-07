@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 const obj = {};
 const objNextVariant = {};
 const userData = {

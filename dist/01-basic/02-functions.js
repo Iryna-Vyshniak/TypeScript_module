@@ -1,4 +1,4 @@
-/* eslint-disable prettier/prettier */
+/* eslint-disable prefer-const */
 function fn(num, str, bool, empty) {
     // Some logic
 }
@@ -68,7 +68,10 @@ function throwError(message) {
 }
 // Function with infinite loop
 function infiniteLoop() {
-    while (true) { }
+    // eslint-disable-next-line no-constant-condition
+    while (true) {
+        console.log("Infinite Loop");
+    }
 }
 // ------------------------------------------------------------------
 function average(...nums) {

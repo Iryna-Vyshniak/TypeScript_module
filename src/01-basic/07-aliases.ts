@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 // Алиас это всё то, что мы обозначаем словом type.
 
 // Такую запись как:

@@ -1,5 +1,4 @@
 "use strict";
-/* eslint-disable prettier/prettier */
 function printPoint(point) {
     console.log(`Coordinate of the point is x: ${point.x} and y: ${point.y}`);
 }

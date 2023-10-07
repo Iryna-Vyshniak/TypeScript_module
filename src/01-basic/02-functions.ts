@@ -1,4 +1,4 @@
-/* eslint-disable prettier/prettier */
+/* eslint-disable prefer-const */
 function fn(num: number, str: string, bool: boolean, empty: null) {
     // Some logic
 }
@@ -91,7 +91,9 @@ function throwError(message: string): never {
 
 // Function with infinite loop
 function infiniteLoop(): never {
-    while (true) { }
+    // eslint-disable-next-line no-constant-condition
+    while (true) { console.log("Infinite Loop") }
+
 }
 
 export { };

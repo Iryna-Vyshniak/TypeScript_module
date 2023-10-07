@@ -1,5 +1,4 @@
 "use strict";
-/* eslint-disable prettier/prettier */
 let arrString;
 let arrNumber;
 let numbers;

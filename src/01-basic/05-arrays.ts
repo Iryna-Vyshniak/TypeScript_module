@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 let arrString: string[];
 let arrNumber: number[];
 let numbers: Array<number>;

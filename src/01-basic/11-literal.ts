@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 // Literal Type — це тип, що набуває конкретного значення.З ним ви можете визначити тип змінної так, щоб він набував лише певних значень.
 
 type FirstOrSecond = 1 | 2;

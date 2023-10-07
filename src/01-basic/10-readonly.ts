@@ -3,7 +3,6 @@
 
 // readonly  - say that const skill = [1, 'Dev'];  is tuple and can`t be changed
 
-// eslint-disable-next-line prettier/prettier
 const skill: readonly [number, string] = [1, 'Dev'];
 // skill[0] = 2;  // error
 

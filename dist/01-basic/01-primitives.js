@@ -1,5 +1,5 @@
 "use strict";
-/* eslint-disable prettier/prettier */
+/* eslint-disable prefer-const */
 // -------- numbers ----------------------------------------------------------------
 const decimal = 6; // десяткові
 const float = 3.14; // речові або число з плаваючою крапкою

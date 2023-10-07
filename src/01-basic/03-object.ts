@@ -1,5 +1,3 @@
-/* eslint-disable prettier/prettier */
-
 const obj: object = {};
 const objNextVariant: {} = {};
 

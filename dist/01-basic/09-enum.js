@@ -1,5 +1,4 @@
 "use strict";
-/* eslint-disable prettier/prettier */
 var ShapeKind;
 (function (ShapeKind) {
     ShapeKind[ShapeKind["Circle"] = 0] = "Circle";

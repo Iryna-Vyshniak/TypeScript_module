@@ -1,3 +1,10 @@
+const exampleUnion = {
+    a: 'a',
+    b: 'b',
+    c: 1,
+    f: true,
+    z: null
+};
 const user = {
     roleId: 0,
     login: "employee",
@@ -25,4 +32,4 @@ export const developer = {
         return `id: ${id}`;
     }
 };
-//# sourceMappingURL=01-interface.js.map
+//# sourceMappingURL=02-aliases-merge.js.map

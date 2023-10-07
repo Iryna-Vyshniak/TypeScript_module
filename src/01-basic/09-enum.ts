@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 enum ShapeKind {
     Circle, // 0
     Square, // 1
