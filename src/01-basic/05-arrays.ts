@@ -67,7 +67,7 @@ for (const skill of skills) {
 }
 
 const sk = skills.filter((sk) => sk !== 'Testing');
-const skl = skills
+export const skl = skills
     .filter((sk: string) => sk !== 'Testing')
     .map((sk) => sk + '! ')
     .reduce((a, b) => a + b, '');

@@ -1,4 +1,3 @@
-"use strict";
 let arrString;
 let arrNumber;
 let numbers;
@@ -44,7 +43,7 @@ for (const skill of skills) {
     console.log(skill.toLocaleUpperCase());
 }
 const sk = skills.filter((sk) => sk !== 'Testing');
-const skl = skills
+export const skl = skills
     .filter((sk) => sk !== 'Testing')
     .map((sk) => sk + '! ')
     .reduce((a, b) => a + b, '');
