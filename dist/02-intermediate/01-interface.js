@@ -25,4 +25,11 @@ export const developer = {
         return `id: ${id}`;
     }
 };
+// interface IPaymentRequest extends IPayment { }
+var PaymentStatus;
+(function (PaymentStatus) {
+    PaymentStatus["SUCCESS"] = "success";
+    PaymentStatus["FAILED"] = "failed";
+})(PaymentStatus || (PaymentStatus = {}));
+// function get(): IResponseSuccess | IResponseFailed { }
 //# sourceMappingURL=01-interface.js.map

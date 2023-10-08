@@ -73,3 +73,47 @@ export const developer: Developer = {
         return `id: ${id}`;
     }
 }
+
+
+// ---------------------------------------------------------------------
+
+interface IPayment {
+    "sum": number,
+    "from": number,
+    "to": number
+}
+
+// interface IPaymentRequest extends IPayment { }
+
+enum PaymentStatus {
+    SUCCESS = "success",
+    FAILED = "failed",
+}
+
+interface IDataSuccess extends IPayment {
+    "databaseId": number,
+}
+
+interface IDataFailed {
+    "errorMessage": string,
+    "errorCode": number
+}
+
+// doesn`t good
+// interface IResponse {
+//     "status": PaymentStatus,
+//     "data": IDataSuccess | IDataFailed
+// }
+
+// better variant
+interface IResponseSuccess {
+    "status": PaymentStatus.SUCCESS,
+    "data": IDataSuccess
+}
+
+interface IResponseFailed {
+    "status": PaymentStatus.FAILED,
+    "data": IDataFailed
+}
+
+// function get(): IResponseSuccess | IResponseFailed { }
