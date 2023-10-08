@@ -1,4 +1,3 @@
-"use strict";
 const user = {
     login: 'q@q.ua',
     password: 'qwerty',
@@ -18,7 +17,7 @@ function testPass(user) {
 function testPassX(user) {
     const t = user.password.type; // sure that the password will never be undefined, always have type
 }
-function test(params) {
+export function test(params) {
     const t = params && multiply(5); // if params is undefined or null -> do function multiply(5)
 }
 //# sourceMappingURL=06-optional.js.map

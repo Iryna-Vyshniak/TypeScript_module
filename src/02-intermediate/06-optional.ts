@@ -35,7 +35,7 @@ function testPassX(user: UserPro) {
 }
 
 
-function test(params?: string) {
+export function test(params?: string) {
     const t = params && multiply(5) // if params is undefined or null -> do function multiply(5)
 }
 
