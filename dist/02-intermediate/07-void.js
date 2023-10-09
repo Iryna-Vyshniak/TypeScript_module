@@ -18,4 +18,5 @@ const user = {
     s: ['s']
 };
 skills.forEach(skill => user.s.push(skill));
+const v = undefined;
 //# sourceMappingURL=07-void.js.map

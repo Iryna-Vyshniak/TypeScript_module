@@ -27,3 +27,5 @@ const user = {
 }
 
 skills.forEach(skill => user.s.push(skill))
+
+const v: void = undefined;
