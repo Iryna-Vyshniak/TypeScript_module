@@ -22,7 +22,7 @@ const bX = f2(); // void
 
 const skills = ['Dev', 'Guard']
 
-const user = {
+export const user = {
     s: ['s']
 }
 

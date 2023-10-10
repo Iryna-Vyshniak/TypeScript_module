@@ -117,3 +117,22 @@ interface IResponseFailed {
 }
 
 // function get(): IResponseSuccess | IResponseFailed { }
+
+type f = (response: IResponseSuccess | IResponseFailed) => number;
+type Res = IResponseSuccess | IResponseFailed;
+
+// type guard
+function isSuccess(res: Res): res is IResponseSuccess {
+    if (res.status === PaymentStatus.SUCCESS) {
+        return true
+    }
+    return false;
+}
+
+function getIdFromData(res: Res): number {
+    if (isSuccess(res)) {
+        return res.data.databaseId;
+    } else {
+        throw new Error(res.data.errorMessage)
+    }
+}

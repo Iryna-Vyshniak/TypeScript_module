@@ -66,7 +66,8 @@ const admin = {
     ...user,
     role: 1,
 };
-function userToAdmin(user) {
+// functin maping
+export function userToAdmin(user) {
     return {
         name: user.name,
         role: 1

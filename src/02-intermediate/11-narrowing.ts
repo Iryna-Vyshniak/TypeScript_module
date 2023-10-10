@@ -89,7 +89,8 @@ const admin: IAdmin = {
     role: 1,
 }
 
-function userToAdmin(user: IUser): IAdmin {
+// functin maping
+export function userToAdmin(user: IUser): IAdmin {
     return {
         name: user.name,
         role: 1

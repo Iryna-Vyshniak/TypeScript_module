@@ -35,7 +35,7 @@ function processAction(action: paymentAction) {
 }
 
 
-function isString(x: string | number): boolean {
+export function isString(x: string | number): boolean {
     if (typeof x === 'string') {
         return true
     } else {

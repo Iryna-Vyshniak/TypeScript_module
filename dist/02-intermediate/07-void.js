@@ -1,4 +1,3 @@
-"use strict";
 function logId(id) {
     console.log(id);
 }
@@ -14,7 +13,7 @@ const f2 = () => {
 };
 const bX = f2(); // void
 const skills = ['Dev', 'Guard'];
-const user = {
+export const user = {
     s: ['s']
 };
 skills.forEach(skill => user.s.push(skill));

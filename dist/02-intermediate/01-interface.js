@@ -31,5 +31,19 @@ var PaymentStatus;
     PaymentStatus["SUCCESS"] = "success";
     PaymentStatus["FAILED"] = "failed";
 })(PaymentStatus || (PaymentStatus = {}));
-// function get(): IResponseSuccess | IResponseFailed { }
+// type guard
+function isSuccess(res) {
+    if (res.status === PaymentStatus.SUCCESS) {
+        return true;
+    }
+    return false;
+}
+function getIdFromData(res) {
+    if (isSuccess(res)) {
+        return res.data.databaseId;
+    }
+    else {
+        throw new Error(res.data.errorMessage);
+    }
+}
 //# sourceMappingURL=01-interface.js.map

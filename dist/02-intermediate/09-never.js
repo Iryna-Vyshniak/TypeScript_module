@@ -1,4 +1,3 @@
-"use strict";
 function generateError(message) {
     throw new Error(message);
 }
@@ -28,7 +27,7 @@ function processAction(action) {
             throw new Error('Unknown action');
     }
 }
-function isString(x) {
+export function isString(x) {
     if (typeof x === 'string') {
         return true;
     }
