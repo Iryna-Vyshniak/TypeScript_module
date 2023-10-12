@@ -24,7 +24,7 @@ interface User {
     name: string;
 }
 
-function getUser() {
+export function getUser() {
     if (Math.random() > 0.5) {
         // return; // bad variant because then we can have undefined user
         return null;
