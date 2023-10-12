@@ -54,4 +54,25 @@ function setRoleZero(user) {
         throw new Error('user is not admin');
     }
 }
+function isAnInternetOrder(order) {
+    return !!order && 'email' in order;
+}
+function isATelephoneOrder(order) {
+    return !!order && 'callerNumber' in order;
+}
+/* function isAnInternetOrder(order: PossibleOrders): order is InternetOrder {
+  return (order as InternetOrder).email !== undefined;
+}
+ 
+function isATelephoneOrder(order: PossibleOrders): order is TelephoneOrder {
+  return (order as TelephoneOrder).callerNumber !== undefined;
+} */
+function makeOrder(order) {
+    if (isAnInternetOrder(order)) {
+        console.log(order.email);
+    }
+    else if (isATelephoneOrder(order)) {
+        console.log(order.callerNumber);
+    }
+}
 //# sourceMappingURL=12-type-guard.js.map
