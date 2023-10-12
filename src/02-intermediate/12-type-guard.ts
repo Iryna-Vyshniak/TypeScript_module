@@ -111,7 +111,7 @@ function isATelephoneOrder(order: PossibleOrders): order is TelephoneOrder {
 } */
 
 
-function makeOrder(order: PossibleOrders) {
+export function makeOrder(order: PossibleOrders) {
     if (isAnInternetOrder(order)) {
         console.log(order.email);
     } else if (isATelephoneOrder(order)) {

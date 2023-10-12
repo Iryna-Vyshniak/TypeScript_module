@@ -1,4 +1,3 @@
-"use strict";
 // Predicate functions are functions that return a single TRUE or FALSE.
 // function predicat => pet is Fish like for   if ('swim' in animal) {return animal.swim();
 function isFish(pet) {
@@ -67,7 +66,7 @@ function isATelephoneOrder(order) {
 function isATelephoneOrder(order: PossibleOrders): order is TelephoneOrder {
   return (order as TelephoneOrder).callerNumber !== undefined;
 } */
-function makeOrder(order) {
+export function makeOrder(order) {
     if (isAnInternetOrder(order)) {
         console.log(order.email);
     }
