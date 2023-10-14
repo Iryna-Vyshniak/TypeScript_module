@@ -78,7 +78,7 @@ const adminTest: AdminTest = {
     role: 'super admin',
 };
 
-function login(user: { login: string; password: string }) {
+export function login(user: { login: string; password: string }) {
     if (user.login.length > 0 && user.password.length > 0) return `Welcome ${user.login}`;
     return 'Please sign up';
 }

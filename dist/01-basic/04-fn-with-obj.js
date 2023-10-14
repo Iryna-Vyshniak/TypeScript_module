@@ -1,4 +1,3 @@
-"use strict";
 function printPoint(point) {
     console.log(`Coordinate of the point is x: ${point.x} and y: ${point.y}`);
 }
@@ -46,7 +45,7 @@ const adminTest = {
     lastVisited: new Date(2023, 4, 10),
     role: 'super admin',
 };
-function login(user) {
+export function login(user) {
     if (user.login.length > 0 && user.password.length > 0)
         return `Welcome ${user.login}`;
     return 'Please sign up';

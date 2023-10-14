@@ -1,4 +1,3 @@
-"use strict";
 /* eslint-disable prefer-const */
 // -------- numbers ----------------------------------------------------------------
 const decimal = 6; // десяткові
@@ -54,5 +53,5 @@ const strA = 'Some string';
 const boolA = true;
 const emptyA = null;
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
-const notParamA = undefined;
+export const notParamA = undefined;
 //# sourceMappingURL=01-primitives.js.map
