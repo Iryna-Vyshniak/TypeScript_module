@@ -20,3 +20,10 @@ toArray('ad', 'sd', 'gh') // ['ad', 'sd', 'gh']
 
 
 const head = <T>(value: T[]): T => value[0];
+
+function append<T>(el: T, list: T[]): T[] {
+    return list.concat(el)
+}
+
+append(1, [123, 34])
+append('1', ['123', '34'])

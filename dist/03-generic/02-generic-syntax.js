@@ -11,4 +11,9 @@ function toArray(...args) {
 toArray(1, 2, 3); // [1, 2, 3]
 toArray('ad', 'sd', 'gh'); // ['ad', 'sd', 'gh']
 const head = (value) => value[0];
+function append(el, list) {
+    return list.concat(el);
+}
+append(1, [123, 34]);
+append('1', ['123', '34']);
 //# sourceMappingURL=02-generic-syntax.js.map
