@@ -73,6 +73,7 @@ function infiniteLoop() {
         console.log("Infinite Loop");
     }
 }
+export { average };
 // ------------------------------------------------------------------
 function average(...nums) {
     const sum = nums.reduce((current, total) => current + total, 0);
@@ -116,5 +117,4 @@ function userConstructor(name, age, hobby) {
         hobby,
     };
 }
-export {};
 //# sourceMappingURL=02-functions.js.map

@@ -96,7 +96,7 @@ function infiniteLoop(): never {
 
 }
 
-export { };
+export { average };
 
 // ------------------------------------------------------------------
 function average(...nums: number[]) {
