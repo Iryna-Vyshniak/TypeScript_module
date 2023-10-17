@@ -115,33 +115,32 @@ class Slash {
         this.container.style.width = `${width}px`;
         this.container.style.height = `${height}px`;
         this.container.style.overflow = 'hidden';
+        this.container.style.display = 'flex';
         this.slashLine.style.position = 'absolute';
         this.slashLine.style.top = '0';
         this.slashLine.style.zIndex = '10';
         this.slashLine.style.backgroundColor = this.slashOptions.slash.color;
         this.slashLine.style.width = `${this.slashOptions.slash.thickness}px`;
+        this.slashLine.style.borderColor = `transparent`;
+        this.slashLine.style.borderWidth = `12px`;
         this.slashLine.style.height = '100%';
         this.slashLine.style.cursor = 'e-resize';
         const bannerStyleRight = `
             position: absolute;
             top: 0;
-            left: 100%;
-            transform: translateX(0%);
-            z-index: 2;
+            left: 0;
+
             width: 100%;
             height: 100%;
-            white-space: nowrap;
-            overflow: hidden;
         `;
         const bannerStyleLeft = `
             position: absolute;
             top: 0;
             left: 0;
-            z-index: 1;
+            z-index: 2;
+
             width: 100%;
             height: 100%;
-            white-space: nowrap;
-            overflow: hidden;
         `;
         this.leftBanner.style.cssText = bannerStyleLeft;
         this.rightBanner.style.cssText = bannerStyleRight;
@@ -211,50 +210,98 @@ const options = {
         right: document.createElement('div'),
     },
     slash: {
-        color: '#ffffff',
+        color: 'transparent',
         thickness: 4,
     },
 };
-const bannerStyleRight = `
+const bannerWStyleRight = `
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
     height: 100%;
-    background-image: url(${imgUrl}); 
-    background-repeat: no-repeat; 
-    background-position: right center; 
-    background-size: cover; 
+    white-space: nowrap;
+    overflow: hidden;
 `;
-const bannerStyleLeft = `
+const bannerWStyleLeft = `
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    flex: 1;
+    // or
+    //transform: translateX(0%);
+
+    width: 100%;
     height: 100%;
-    background-image: url(${imgUrl}); 
-    background-repeat: no-repeat; 
-    background-position: left center; 
-    background-size: cover; 
+    white-space: nowrap;
+    overflow: hidden;
+
+    overflow: hidden; 
+`;
+const imgStyleL = `
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: left top;
+    overflow: hidden;
+`;
+const imgStyleR = `
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    overflow: hidden;
 `;
 const bannerStyleTop = `
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    margin: 0;
     width: 100%;
     padding: 4px 10px;
     font-size: 12px;
     background-color: #7bbe9a;
-    overflow: hidden;
+    
 `;
 const bannerLStyleTop = `
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+
+    margin: 0;
     width: 100%;
     padding: 4px 10px;
     font-size: 12px;
     background-color: #686965;
-    overflow: hidden;
 `;
 options.items.right.innerHTML = `
-<div style="${bannerStyleRight}">
+<div style="${bannerWStyleRight}">
         <p style="${bannerStyleTop}">
-        Meets the power to recline
+            Meets the power to recline
         </p>
-        </div>
+        <img src='${imgUrl}' alt='flat' style="${imgStyleR}">
+</div>
 `;
 options.items.left.innerHTML = `
-<div style="${bannerStyleLeft}">
-<p style="${bannerLStyleTop}">
-The power to turn heads
-</p>
+<div style="${bannerWStyleLeft}">
+        <p style="${bannerLStyleTop}">
+            The power to turn heads
+        </p>
+        <img src='${imgUrl}' alt='flat' style="${imgStyleL}">
 </div>
 `;
 const slashInstance = new Slash(options);
