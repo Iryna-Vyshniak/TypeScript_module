@@ -16,4 +16,11 @@ const todo2 = {
     title: 'Study',
     completed: false
 };
+const visitedCountries = {
+    Africa: ['Egypt', 'Angola', 'Tunis'],
+    America: ['Mexico'],
+    Asia: ['India'],
+    Europe: ['Spain', 'England', 'Hungary'],
+    Oceania: []
+};
 //# sourceMappingURL=06-pick-omit.js.map

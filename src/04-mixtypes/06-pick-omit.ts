@@ -47,4 +47,36 @@ const todo2: SimpleTodo2 = {
 type NewTodo = Pick<ITodo, 'title' | 'description'>
 
 
+// Як потрібно описати тип CountriesByRegion для коректної типізації?
+type Regions = 'Africa' | 'America' | 'Asia' | 'Europe' | 'Oceania';
 
+
+type CountriesByRegion = Record<Regions, string[]>
+
+const visitedCountries: CountriesByRegion = {
+    Africa: ['Egypt', 'Angola', 'Tunis'],
+    America: ['Mexico'],
+    Asia: ['India'],
+    Europe: ['Spain', 'England', 'Hungary'],
+    Oceania: []
+}
+
+// Даний тип Country, який буде використовуватись у різних цілях.
+
+// Ми хочемо створити компонент із карткою, де мають виводитися лише назви країни, столиця та регіон.Як нам сформувати тип CountryCardProps?
+
+type Country = {
+    name: string,
+    region: string,
+    population: number,
+    flag: string,
+    capital: string,
+    currencies: string[],
+    languages: string[],
+}
+
+type CountryCardProps = Pick<Country, 'name' | 'region' | 'capital'>
+
+// Ми знову працюємо з типом Country та знову хочемо створити компонент картки країни, але тепер крім назви, регіону та столиці, ми хочемо також додати туди прапор та розмір населення. Як нам сформувати тип CountryCardProps?
+
+type CountryCardProps2 = Omit<Country, 'currencies' | 'languages'>
