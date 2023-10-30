@@ -1,0 +1,1 @@
+{"version":3,"file":"01-class-interface.js","sourceRoot":"","sources":["../../src/05-class/01-class-interface.ts"],"names":[],"mappings":"AAIA,MAAM,OAAO,GAAG;IACd,EAAE,CAAC,KAAa;QACd,OAAO,CAAC,GAAG,CAAC,uBAAuB,EAAE,KAAK,CAAC,OAAO,EAAE,CAAC,CAAC;IACxD,CAAC;IACD,IAAI;QACF,OAAO,CAAC,GAAG,CAAC,SAAS,CAAC,CAAC;IACzB,CAAC;CACF;AAED,MAAM,GAAG,GAAG,IAAI,GAAG,CAAC"}
