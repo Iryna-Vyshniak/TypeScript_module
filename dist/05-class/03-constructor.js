@@ -33,4 +33,31 @@ export class Car extends Vehicle {
 }
 const car1 = new Car('red', 200);
 // car1.color = 'blue'
+// ----------------------------------------------------------
+/* Що необхідно вказати в конструкторі для параметрів, що передаються, щоб використовувати спрощений запис?
+
+answer: Модифікатор доступу до параметра та його тип. */
+export class Rectangle {
+    constructor(width, height) {
+        this.width = width;
+        this.height = height;
+        this.log();
+    }
+    area() {
+        return this.height * this.width;
+    }
+    log() {
+        console.log(`new Rectangle was create at ${new Date()}`);
+    }
+}
+class Square extends Rectangle {
+    constructor(width, color) {
+        super(width, width);
+        this.width = width;
+        this.color = color;
+    }
+    paint(newColor) {
+        this.color = newColor;
+    }
+}
 //# sourceMappingURL=03-constructor.js.map

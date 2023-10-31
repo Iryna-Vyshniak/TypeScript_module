@@ -1,7 +1,7 @@
 class Vehicle {
   // private createdAt: Date;
 
-  constructor(protected createdAt: Date) {}
+  constructor(protected createdAt: Date) { }
 
   public drive(speed: number): void {
     console.log(' Let us go with speed', speed.toFixed());
@@ -39,3 +39,32 @@ export class Car extends Vehicle {
 
 const car1 = new Car('red', 200)
 // car1.color = 'blue'
+
+// ----------------------------------------------------------
+/* Що необхідно вказати в конструкторі для параметрів, що передаються, щоб використовувати спрощений запис?
+
+answer: Модифікатор доступу до параметра та його тип. */
+
+export class Rectangle {
+  constructor(public width: number, public height: number) {
+    this.log();
+  }
+
+  area(): number {
+    return this.height * this.width;
+  }
+
+  private log(): void {
+    console.log(`new Rectangle was create at ${new Date()}`)
+  }
+}
+
+class Square extends Rectangle {
+  constructor(public width: number, public color: string) {
+    super(width, width)
+  }
+
+  paint(newColor: string): void {
+    this.color = newColor;
+  }
+}
